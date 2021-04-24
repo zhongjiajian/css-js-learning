@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>white-space</title>
+    <link rel="stylesheet" href="./static/css/main.css">
+    <style>
+        p{
+            background-color: bisque;
+        }
+        p:nth-of-type(2){
+            white-space: nowrap;
+        }
+        p:nth-of-type(3){
+            white-space: pre;
+        }
+        p:nth-of-type(4){
+            white-space: pre-wrap;
+        }
+        p:nth-of-type(5){
+            white-space: pre-line;
+        }
+    </style>
+</head>
+<body>
+<ol>
+    <li>white-space: normal; 默认。空白会被浏览器忽略。</li>
+    <p>
+        《题都城南庄》
+        【作者】崔护 【朝代】唐
+
+        去年今日此门中，人面桃花相映红。
+        人面不知何处去，桃花依旧笑春风。人面不知何处去，桃花依旧笑春风。人面不知何处去，桃花依旧笑春风。人面不知何处去，桃花依旧笑春风。
+    </p>
+    <li>white-space: nowrap; 文本不会换行，文本会在在同一行上继续，直到遇到 &lt;br> 标签为止。</li>
+    <p>
+        《题都城南庄》
+        【作者】崔护        【朝代】唐
+
+        去年今日此门中，人面桃花相映红。
+        人面不知何处去，桃花依旧笑春风。人面不知何处去，桃花依旧笑春风。人面不知何处去，桃花依旧笑春风。人面不知何处去，桃花依旧笑春风。
+    </p>
+    <li>white-space: pre; 空白会被浏览器保留。其行为方式类似 HTML 中的 &lt;pre&gt; 标签。</li>
+    <p>
+        《题都城南庄》
+        【作者】崔护        【朝代】唐
+
+        去年今日此门中，人面桃花相映红。
+        人面不知何处去，桃花依旧笑春风。人面不知何处去，桃花依旧笑春风。人面不知何处去，桃花依旧笑春风。人面不知何处去，桃花依旧笑春风。
+    </p>
+    <li>white-space: pre-wrap; 保留空白符序列，但是正常地进行换行。</li>
+    <p>
+        《题都城南庄》
+        【作者】崔护        【朝代】唐
+
+        去年今日此门中，人面桃花相映红。
+        人面不知何处去，桃花依旧笑春风。人面不知何处去，桃花依旧笑春风。人面不知何处去，桃花依旧笑春风。人面不知何处去，桃花依旧笑春风。
+    </p>
+    <li>white-space: pre-line; 合并空白符序列，但是保留换行符。</li>
+    <p>
+        《题都城南庄》
+        【作者】崔护        【朝代】唐
+        
+        去年今日此门中，人面桃花相映红。
+        人面不知何处去，桃花依旧笑春风。人面不知何处去，桃花依旧笑春风。人面不知何处去，桃花依旧笑春风。人面不知何处去，桃花依旧笑春风。
+    </p>
+</ol>
+</body>
+</html>

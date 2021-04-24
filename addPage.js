@@ -28,7 +28,9 @@ function writeFile(fileName){
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>${fileName}</title>
-    <style></style>
+    <link rel="stylesheet" href="./static/css/main.css">
+    <style>
+    </style>
 </head>
 <body>
     

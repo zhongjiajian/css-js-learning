@@ -5,7 +5,7 @@ const path = require('path');
  
 gulp.task('connect', function() {
   connect.server({
-    root:"dist",
+    root:"demos",
     livereload: true,
     port:8000
   });

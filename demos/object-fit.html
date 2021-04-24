@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>object-fit</title>
+    <link rel="stylesheet" href="./static/css/main.css">
+    <style>
+        img{
+            width: 300px;
+            height: 300px;
+            background-color:  bisque;
+            border: 1px solid bisque;
+        }
+        img:nth-of-type(2){
+            object-fit: contain;
+        }
+        img:nth-of-type(3){
+            object-fit: cover;
+        }
+        img:nth-of-type(4){
+            object-fit: none;
+        }
+        img:nth-of-type(5){
+            object-fit:scale-down;
+        }
+    </style>
+</head>
+<body>
+<ol>
+    <li>object-fit: fill; 默认，不保证保持原有的比例，内容拉伸填充整个内容容器。</li>
+    <img src="/static/images/mm6.jpg" alt="">
+    <li>object-fit: contain; 保持原有尺寸比例。内容被缩放。</li>
+    <img src="/static/images/mm6.jpg" alt="">
+    <li>object-fit: cover; 默认，保持原有尺寸比例。但部分内容可能被剪切。</li>
+    <img src="/static/images/mm6.jpg" alt="">
+    <li>object-fit: none; 默认，保留原有元素内容的长度和宽度，也就是说内容不会被重置。</li>
+    <img src="/static/images/mm6.jpg" alt="">
+    <li>object-fit: scale-down; 保持原有尺寸比例。内容的尺寸与 none 或 contain 中的一个相同，取决于它们两个之间谁得到的对象尺寸会更小一些。</li>
+    <img src="/static/images/mm6.jpg" alt="">
+</ol>
+</body>
+</html>
