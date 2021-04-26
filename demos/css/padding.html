@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>padding</title>
+    <link rel="stylesheet" href="/static/css/main.css">
+    <style>
+        .column-padding{
+            background-color: rgba(44,44,44,.3);
+            padding: 30px;
+            border: 10px solid rgba(66,0,0,.3);
+        }
+        .box1{
+            width: 400px;
+            height: 400px;
+            background-color:aliceblue;
+            padding: 50px;
+        }
+        .box2{
+            width: 50%;
+            height: 50%;
+            background-color: antiquewhite;
+        }
+        .box3{
+            width: 20%;
+            height: 20%;
+            padding: 20%;
+            background-color: blueviolet;
+        }
+        .inline{
+            padding: 10%;
+        }
+    </style>
+</head>
+<body>
+    <ol>
+        <li>内联元素垂直方向的padding</li>
+        <section>
+            <i class="column-padding">padding-top</i>
+        </section>
+        <li>百分比：相对于父元素content宽度</li>
+        <section>
+            <div class="box1">
+                <div  class="box2">
+                    <div class="box3">
+                        
+                    </div>
+                </div>
+            </div>
+            <span class="inline">内联元素的padding百分比</span>
+        </section>
+    </ol>
+</body>
+</html>

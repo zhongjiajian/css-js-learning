@@ -1,7 +1,7 @@
 const { rejects } = require("assert");
-var {
-    exec
-} = require("child_process");
+// var {
+//     exec
+// } = require("child_process");
 var fs = require('fs');
 const { resolve } = require("path");
 var path = require('path');
@@ -13,14 +13,15 @@ function checkOptions(args) {
         if (!args.includes('-n')) {
             return reject("缺少n参数,like: node addPage.js -n '新页面名字'");
         };
-        let fileName = args[args.indexOf('-n') + 1];
-        return resolve(fileName);
+        let filePath = args[args.indexOf('-n') + 1];
+        return resolve(filePath);
     })
 }
 
-function writeFile(fileName){
+function writeFile(filePath){
     return new Promise((resolve,reject)=>{
-        const filePath = path.resolve(__dirname,`./demos/${fileName}.html`)
+        const fileName = filePath.split("/").pop();
+        filePath = path.resolve(__dirname,`./demos/${filePath}.html`)
         let content = `<!DOCTYPE html>
 <html lang="en">
 <head>
@@ -28,7 +29,7 @@ function writeFile(fileName){
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>${fileName}</title>
-    <link rel="stylesheet" href="./static/css/main.css">
+    <link rel="stylesheet" href="/static/css/main.css">
     <style>
     </style>
 </head>
@@ -45,8 +46,8 @@ function writeFile(fileName){
 }
 
 (async function () {
-    const fileName = await checkOptions(args);
-    return await writeFile(fileName);
+    const filePath = await checkOptions(args);
+    return await writeFile(filePath);
 })()
 .then(console.log)
 .catch(console.log)

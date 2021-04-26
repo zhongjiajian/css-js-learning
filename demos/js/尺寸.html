@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>尺寸</title>
+    <link rel="stylesheet" href="/static/css/main.css">
+    <style>
+        .box1{
+            background-color:aliceblue;
+            width: 100px;
+            height: 100px;
+            padding: 10px;
+            border: 10px solid #333;
+            margin-left: 100px;
+            /* position: relative; */
+        }
+        .box2{
+            background-color: red;
+            width: 10px;
+            height: 10px;
+            padding: 5px;
+            border: 2px solid #333;
+            /* position: absolute; */
+        }
+    </style>
+</head>
+<body>
+    <h4>offsetWidth、offsetHeight</h4>
+    <h4>clientWidth、clientHeight</h4>
+    <h4>innerWidth、innerHeight (window)</h4>
+    <h4>outerWidth、outerHeight (window)</h4>
+    <h4>scrollWidth、scrollHeight</h4>
+    <h4>offsetLeft、offsetTop</h4>
+    <h4>scrollLeft、scrollTop</h4>
+    <h4>offsetX、offsetY</h4>
+    <h4>clientX、clientY</h4>
+    <h4>pageX、pageY</h4>
+    <h4>screenX、screenY</h4>
+
+    <h4>dom.getClientRects、dom.getBoundingClientRect</h4>
+    <h4>getComputedStyle(dom).getPropertyValue</h4>
+
+    <div class="box1">
+        <div class="box2"></div>
+    </div>
+    <script>
+        document.querySelector(".box1").addEventListener("click",function(e){
+            console.log(e);
+        },false)
+    </script>
+</body>
+</html>

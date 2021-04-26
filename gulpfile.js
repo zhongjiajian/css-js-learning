@@ -2,7 +2,10 @@ var gulp = require('gulp'),
   connect = require('gulp-connect');
 const del = require('del');
 const path = require('path');
- 
+const {
+  exec
+} = require('child_process');
+const { stdout } = require('process');
 gulp.task('connect', function() {
   connect.server({
     root:"demos",
@@ -25,3 +28,9 @@ gulp.task('default', gulp.series(() =>
 del([path.resolve('./dist')], {
   force: true
 }),gulp.parallel('connect', 'html', 'watch')));
+
+exec("open http://localhost:8000",(err,stdout,stderr)=>{
+  if(err) console.log(err);
+  stdout && console.log('stdout:',stdout);
+  stderr && console.log('stderr:',stderr);
+})

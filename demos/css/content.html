@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>content</title>
-    <link rel="stylesheet" href="./static/css/main.css">
+    <link rel="stylesheet" href="/static/css/main.css">
     <style>
         p:nth-of-type(1){
             background-color: bisque;
@@ -69,6 +69,35 @@
                 transform: translateY(-1em);
             }
         }
+        .fight:before{
+            content: attr(data-icon1);
+            font-size: 50px;
+        }
+        .fight:after{
+            content: attr(data-icon2);
+            font-size: 50px;
+        }
+        
+        .reset{
+            counter-reset: myFirstCounter 0;
+        }
+        .increment{
+            counter-increment: myFirstCounter 1;
+        }
+        .counter .title:before{
+            content: counters(myFirstCounter,'-')'. ';
+            color: red;
+            font-size: 40px;
+            white-space: pre-wrap;
+        }
+        .counter i:before{
+            content: counters(myFirstCounter,'-')  '.    ';
+            color: red;
+            font-size: 20px;
+        }
+        .content-img:after{
+            content:url(/static/images/mm3.jpeg);
+        }
     </style>
 </head>
 <body>
@@ -87,6 +116,23 @@
         <li>加载中...</li>
         <p>
             正在加载中<dot>...</dot>
+        </p>
+        <li>attr属性值内容生成</li>
+        <p>
+            <i class="fight" data-icon1="💪" data-icon2="⛽️">加油哦！</i>
+        </p>
+        <li>计数器counter</li>
+        <section>
+            <div class="counter reset">
+                <div class="title increment">&lt;&lt;counter>></div>
+                <i class="reset increment">counter-reset</i>
+                <i class="increment">counter-increment</i>
+                <i class="increment">counter</i>
+            </div>
+        </section>
+        <li>content生成图片</li>
+        <p>
+            <span class="content-img">我的:after是个图片</span>
         </p>
     </ol>
 </body>
