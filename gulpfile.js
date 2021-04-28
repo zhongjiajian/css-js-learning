@@ -10,7 +10,9 @@ gulp.task('connect', function() {
   connect.server({
     root:"demos",
     livereload: true,
-    port:8000
+    host:"::",
+    port:8000,
+    // https: true
   });
 });
  
@@ -34,3 +36,6 @@ exec("open http://localhost:8000",(err,stdout,stderr)=>{
   stdout && console.log('stdout:',stdout);
   stderr && console.log('stderr:',stderr);
 })
+
+
+

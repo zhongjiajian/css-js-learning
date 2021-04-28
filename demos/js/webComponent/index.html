@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>webComponent</title>
+    <link rel="stylesheet" href="/static/css/main.css">
+    <script defer src="./popupInfo.js"></script>
+    <style>
+        span,button{
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <popup-info img="/static/images/mm7.jpg" data-text="译者提示: 在Chrome版本76.0.3809.132（正式版本）（64 位）中测试发现，customElements.define()必须在js文件中调用，且引用此js文件时必须在script标签上添加defer属性，否则this.getAttribute('属性名称')无法获取到值。"></popup-info>
+    <button class="update">update</button>
+    <template id="my-paragraph">
+        <p>My paragraph</p>
+    </template>
+</body>
+</html>

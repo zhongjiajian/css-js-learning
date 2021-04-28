@@ -20,5 +20,8 @@
     "del": "^6.0.0",
     "gulp": "^4.0.2",
     "gulp-connect": "^5.7.0"
+  },
+  "dependencies": {
+    "http2": "^3.3.7"
   }
 }
