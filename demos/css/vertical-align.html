@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>vertical-align</title>
+    <link rel="stylesheet" href="/static/css/main.css">
+    <style>
+        .box1 {
+            line-height: 96px;
+            background-color: #ccc;
+        }
+
+        .box1 span {
+            font-size: 24px;
+            background-color: aliceblue;
+            display: inline-block;
+        }
+        .box2{
+            background: #ccc;
+        }
+        .box3{
+            height: 96px;
+            background-color: #ccc;
+        }
+        .box3 span {
+            font-size: 20px;
+            background-color: aliceblue;
+            line-height: 96px;
+            outline: 1px solid;
+        }
+        .box4{
+            height: 96px;
+            background-color: #ccc;
+            font-size: 0;
+        }
+        .box4:before{
+            content: "";
+            display: inline-block;
+            height: 100%;
+            vertical-align: middle;
+        }
+        .box4 span {
+            font-size: 20px;
+            background-color: aliceblue;
+            vertical-align: middle;
+            outline: 1px solid;
+        }
+    </style>
+</head>
+
+<body>
+    <ol>
+        <li>幽灵空白节点，及解决</li>
+        <div class="box1">
+            <span>内容。。。</span>
+        </div>
+        <div>容器设置line-height:0; 或容器设置和元素一样的font-size大小; 或元素设置vertical-align: top/bottom/middle;</div>
+        <div class="box2">
+            <img src="/static/images/mm7.jpg" alt="">
+        </div>
+        <div>容器设置line-height:0; 或容器设置font-size:0; 或元素设置vertical-align: top/bottom/middle;</div>
+        <li>垂直居中</li>
+        <div class="box3">
+            <span>内容。。。</span>
+        </div>
+        <br>
+        <div class="box4">
+            <span>内容。。。</span>
+        </div>
+    </ol>
+</body>
+
+</html>

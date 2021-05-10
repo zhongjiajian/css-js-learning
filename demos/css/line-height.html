@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>line-height</title>
+    <link rel="stylesheet" href="/static/css/main.css">
+    <style>
+        .p{
+            font-size: 30px;
+        }
+        .s{
+            font-size: 20px;
+            height: 3em;
+            background-color: #ccc;
+        }
+        .box1{
+            line-height: 96px;
+            background-color: #ccc;
+        }
+        .box1 span{
+            line-height: 30px;
+        }
+        .box2{
+            line-height: 30px;
+            background-color: #ccc;
+        }
+        .box2 span{
+            line-height: 96px;
+        }
+    </style>
+</head>
+<body>
+    
+    <ol>
+        <li>em单位相对于当前font-size，line-height:1.5;继承的是属性值</li>
+        <div class="p">
+            <div class="s"></div>
+        </div>
+        <li>幽灵空白节点</li>
+        <div class="box1">
+            <span>内容。。。</span>
+        </div>
+        <br>    
+        <div class="box2">
+            <span>内容。。。</span>
+        </div>
+
+    </ol>
+</body>
+</html>

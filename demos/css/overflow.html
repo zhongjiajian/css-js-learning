@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>overflow</title>
+    <link rel="stylesheet" href="/static/css/main.css">
+    <style>
+       ::-webkit-scrollbar{
+            width: 12px;
+            height: 12px;
+        }
+        ::-webkit-scrollbar-thumb{
+            background-color:sandybrown;
+            border-radius: 6px;
+        }
+        ::-webkit-scrollbar-track{
+            background-color: rgb(199, 176, 176);
+            border-radius: 0px;
+        }
+        body{
+            height: 120vh;
+        }
+        .box1{
+            width: 100px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            outline: 1px solid;
+        }
+        .box2{
+            width: 100px;
+            display: -webkit-box;
+            -webkit-box-orient: vertical;
+            -webkit-line-clamp: 2;
+            overflow: hidden;
+            outline: 1px solid;
+        }
+    </style>
+</head>
+<body>
+    <ol>
+        <li>
+            自定义滚动条
+            ::-webkit-scrollbar 血槽宽度
+            ::-webkit-scrollbar-thumb 拖动条
+            ::-webkit-scrollbar-track 背景槽
+        </li>
+        <li>溢出显示点点点</li>
+        <div class="box1">一行点点点点点点点点点点点点点点点点点点点点点</div>
+        <div class="box2">两行点点点点点点点点点点点点点点点点点点点点点</div>
+    </ol>
+</body>
+</html>
