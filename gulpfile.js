@@ -8,7 +8,7 @@ const {
 const { stdout } = require('process');
 gulp.task('connect', function() {
   connect.server({
-    root:"demos",
+    root:"dist",
     livereload: true,
     host:"::",
     port:8000,
